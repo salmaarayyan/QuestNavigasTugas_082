@@ -3,7 +3,6 @@ package com.example.questnavigastugas_082.view
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,6 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import com.example.navigasi.R
+import com.example.questnavigastugas_082.R
+
 
 @Composable
 fun HalamanUtama(
@@ -29,12 +31,12 @@ fun HalamanUtama(
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+    ) {
         Text("Selamat Datang", style = MaterialTheme.typography.headlineLarge, fontFamily = FontFamily.Monospace)
         Spacer(modifier = Modifier.height(32.dp))
 
-            Image(
-            painter = painterResource(R.drawable.pinkcard),
+        Image(
+            painter = painterResource(id = R.drawable.pinkcard),
             contentDescription = "Logo"
         )
         Text("Salmaa Rifhani Rayyan", style = MaterialTheme.typography.titleMedium)

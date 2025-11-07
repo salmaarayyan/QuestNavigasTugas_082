@@ -71,6 +71,17 @@ fun DaftarData(
                     Text(nama, style = MaterialTheme.typography.bodyLarge, fontFamily = FontFamily.Cursive)
                 }
             }
+            // -- Jenis Kelamin
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text("JENIS KELAMIN", fontWeight = FontWeight.SemiBold, color = Color.Gray)
+                    Text(jenisKelamin, style = MaterialTheme.typography.bodyLarge, fontFamily = FontFamily.Cursive)
+                }
+            }
         }
     }
 }

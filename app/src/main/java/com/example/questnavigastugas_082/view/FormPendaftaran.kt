@@ -2,8 +2,11 @@ package com.example.questnavigastugas_082.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -28,6 +31,16 @@ fun FormulirPendaftaran(
             .background(Color(0xFFF6E6FF))
             .verticalScroll(rememberScrollState())
         ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(100.dp)
+                .background(Color(0xFFB56BFF))
+                .padding(16.dp),
+            contentAlignment = Alignment.BottomStart
+        ) {
+
+        }
 
     }
 }

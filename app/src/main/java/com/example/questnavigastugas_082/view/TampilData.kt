@@ -125,5 +125,16 @@ fun DaftarData(
                 Text("Formulir Pendaftaran", color = Color.White)
             }
         }
+        Spacer(modifier = Modifier.height(15.dp))
+        Button(
+            onClick = onBerandaClicked,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Gray) // Warna beda
+        ) {
+            Text("Beranda", color = Color.White)
+        }
     }
 }
+

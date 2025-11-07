@@ -93,6 +93,18 @@ fun DaftarData(
                     Text(status, style = MaterialTheme.typography.bodyLarge, fontFamily = FontFamily.Cursive)
                 }
             }
+
+            // Alamat
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text("ALAMAT", fontWeight = FontWeight.SemiBold, color = Color.Gray)
+                    Text(alamat, style = MaterialTheme.typography.bodyLarge, fontFamily = FontFamily.Cursive)
+                }
+            }
         }
     }
 }

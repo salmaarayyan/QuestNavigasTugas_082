@@ -1,5 +1,3 @@
-package com.example.questnavigastugas_082
-
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -8,6 +6,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.questnavigastugas_082.view.DaftarData
+import com.example.questnavigastugas_082.view.FormulirPendaftaran
+import com.example.questnavigastugas_082.view.HalamanUtama
 
 enum class Tampilan {
     SelamatDatang,
@@ -22,35 +23,29 @@ fun AplikasiPendaftaran(
     Scaffold { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = com.example.navigasi.Tampilan.SelamatDatang.name,
+            startDestination = Tampilan.SelamatDatang.name,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable(route = com.example.navigasi.Tampilan.SelamatDatang.name) {
+            composable(route = Tampilan.SelamatDatang.name) {
                 HalamanUtama(
                     onNextButtonClicked = {
-                        // Pindah ke layar DaftarPeserta
-                        navController.navigate(com.example.navigasi.Tampilan.DaftarPeserta.name)
+                        navController.navigate(Tampilan.DaftarPeserta.name)
                     }
                 )
             }
-
-            composable(route = com.example.navigasi.Tampilan.DaftarPeserta.name) {
+            composable(route = Tampilan.DaftarPeserta.name) {
                 DaftarData(
                     onTambahDataClicked = {
-                        // Pindah ke layar Formulir
-                        navController.navigate(com.example.navigasi.Tampilan.Formulir.name)
+                        navController.navigate(Tampilan.Formulir.name)
                     },
                     onBerandaClicked = {
-                        // Kembali ke layar SelamatDatang
-                        navController.popBackStack(com.example.navigasi.Tampilan.SelamatDatang.name, inclusive = false)
+                        navController.popBackStack(Tampilan.SelamatDatang.name, inclusive = false)
                     }
                 )
             }
-
-            composable(route = com.example.navigasi.Tampilan.Formulir.name) {
+            composable(route = Tampilan.Formulir.name) {
                 FormulirPendaftaran(
                     onSubmitButtonClicked = {
-                        // Kembali ke layar sebelumnya (DaftarPeserta)
                         navController.popBackStack()
                     }
                 )

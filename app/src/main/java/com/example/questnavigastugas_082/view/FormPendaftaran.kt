@@ -74,6 +74,13 @@ fun FormulirPendaftaran(
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(16.dp))
+
+                Text("JENIS KELAMIN", fontWeight = FontWeight.SemiBold)
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+
+                }
             }
         }
 

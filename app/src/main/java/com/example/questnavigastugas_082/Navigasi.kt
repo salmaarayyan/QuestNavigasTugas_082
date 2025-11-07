@@ -33,6 +33,19 @@ fun AplikasiPendaftaran(
                     }
                 )
             }
+
+            composable(route = com.example.navigasi.Tampilan.DaftarPeserta.name) {
+                DaftarData(
+                    onTambahDataClicked = {
+                        // Pindah ke layar Formulir
+                        navController.navigate(com.example.navigasi.Tampilan.Formulir.name)
+                    },
+                    onBerandaClicked = {
+                        // Kembali ke layar SelamatDatang
+                        navController.popBackStack(com.example.navigasi.Tampilan.SelamatDatang.name, inclusive = false)
+                    }
+                )
+            }
         }
     }
 }

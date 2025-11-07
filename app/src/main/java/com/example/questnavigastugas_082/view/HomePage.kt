@@ -17,9 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import com.example.navigasi.R
 import com.example.questnavigastugas_082.R
-
 
 @Composable
 fun HalamanUtama(
@@ -30,15 +28,17 @@ fun HalamanUtama(
             .fillMaxSize()
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
+        horizontalAlignment = Alignment.CenterHorizontally,
+    )
+    {
         Text("Selamat Datang", style = MaterialTheme.typography.headlineLarge, fontFamily = FontFamily.Monospace)
         Spacer(modifier = Modifier.height(32.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.pinkcard),
+            painter = painterResource(R.drawable.pinkcard),
             contentDescription = "Logo"
         )
+
         Text("Salmaa Rifhani Rayyan", style = MaterialTheme.typography.titleMedium)
         Text("20230140082", style = MaterialTheme.typography.bodyMedium)
 
@@ -50,5 +50,6 @@ fun HalamanUtama(
         ) {
             Text("SUBMIT")
         }
+
     }
 }

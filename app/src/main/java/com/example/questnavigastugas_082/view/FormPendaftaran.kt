@@ -92,6 +92,24 @@ fun FormulirPendaftaran(
                         }
                     }
                 }
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Text("STATUS PERKAWINAN", fontWeight = FontWeight.SemiBold)
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    statusList.forEach { item ->
+                        Row(verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
+                            RadioButton(
+                                selected = false,
+                                onClick = null
+                            )
+                            Text(item, modifier = Modifier.padding(start = 8.dp))
+                        }
+                    }
+                }
+
             }
         }
 

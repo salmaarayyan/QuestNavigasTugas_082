@@ -46,6 +46,15 @@ fun AplikasiPendaftaran(
                     }
                 )
             }
+
+            composable(route = com.example.navigasi.Tampilan.Formulir.name) {
+                FormulirPendaftaran(
+                    onSubmitButtonClicked = {
+                        // Kembali ke layar sebelumnya (DaftarPeserta)
+                        navController.popBackStack()
+                    }
+                )
+            }
         }
     }
 }

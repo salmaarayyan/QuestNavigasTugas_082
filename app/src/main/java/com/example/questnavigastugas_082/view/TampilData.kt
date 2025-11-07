@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -110,5 +112,18 @@ fun DaftarData(
 
         // Memberi jarak
         Spacer(modifier = Modifier.height(20.dp))
+
+        // Tombol-tombol navigasi
+        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+            Button(
+                onClick = onTambahDataClicked,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8A2BE2))
+            ) {
+                Text("Formulir Pendaftaran", color = Color.White)
+            }
+        }
     }
 }
